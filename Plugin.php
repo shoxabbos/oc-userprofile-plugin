@@ -14,14 +14,15 @@ class Plugin extends PluginBase
     {
         UserModel::extend(function ($model) {
             $model->addFillable(['profile', 'key', 'leader']);
+            
             $model->hasOne['profile'] = Profile::class;
             $model->hasMany['images'] = Image::class;
+
             $model->bindEvent('model.beforeSave', function() use ($model) {
                 if (!$model->profile) {
                     $model->profile = new Profile();
                 }
             });
-
         });
 
         Event::listen('rainlab.user.register', function ($user, $data) {
@@ -53,6 +54,7 @@ class Plugin extends PluginBase
     {
         return [
             \Shohabbos\UserProfile\Components\Login::class       => 'keylogin',
+            \Shohabbos\UserProfile\Components\Photos::class       => 'userphotos',
         ];
     }
 

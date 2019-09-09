@@ -24,6 +24,7 @@ class Image extends Model
      */
     public $rules = [
     ];
+
     public $attachOne = [
         'image' => \System\Models\File::class
     ];
