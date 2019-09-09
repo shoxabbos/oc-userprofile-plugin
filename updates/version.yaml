@@ -1,0 +1,35 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table shohabbos_userprofile_profile'
+    - builder_table_create_shohabbos_userprofile_profile.php
+1.0.3:
+    - 'Updated table shohabbos_userprofile_profile'
+    - builder_table_update_shohabbos_userprofile_profile.php
+1.0.4:
+    - 'Updated table shohabbos_userprofile_profile'
+    - builder_table_update_shohabbos_userprofile_profile_2.php
+1.0.5:
+    - 'Updated table shohabbos_userprofile_profile'
+    - builder_table_update_shohabbos_userprofile_profile_3.php
+1.0.6:
+    - 'Updated table shohabbos_userprofile_profile'
+    - builder_table_update_shohabbos_userprofile_profile_4.php
+1.0.7:
+    - 'Updated table shohabbos_userprofile_profile'
+    - builder_table_update_shohabbos_userprofile_profile_5.php
+1.0.8:
+    - 'Updated table shohabbos_userprofile_profile'
+    - builder_table_update_shohabbos_userprofile_profile_6.php
+1.0.9:
+    - 'Updated table shohabbos_userprofile_profile'
+    - builder_table_update_shohabbos_userprofile_profile_7.php
+1.0.10:
+    - 'Created table shohabbos_userprofile_images'
+    - builder_table_create_shohabbos_userprofile_images.php
+1.0.11:
+    - 'add key field to the users table'
+    - migration1011.php
+1.0.12:
+    - 'add leader field to the users table'
+    - migration1012.php

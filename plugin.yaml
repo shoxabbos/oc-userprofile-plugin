@@ -1,0 +1,6 @@
+plugin:
+    name: 'shohabbos.userprofile::lang.plugin.name'
+    description: 'shohabbos.userprofile::lang.plugin.description'
+    author: Shohabbos
+    icon: oc-icon-user-md
+    homepage: ''

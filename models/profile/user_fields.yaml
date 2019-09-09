@@ -1,0 +1,26 @@
+profile[background_image]:
+    label: 'Background image'
+    tab: 'Profile'
+    mode: image
+    useCaption: true
+    thumbOptions:
+        mode: crop
+        extension: auto
+    span: left
+    type: fileupload
+profile[phone]:
+    label: Phone
+    span: auto
+    type: text
+    tab: 'Profile'
+key:
+    label: 'Секретный ключ'
+    span: auto
+    type: text
+    tab: 'Profile'
+    disabled: true
+leader:
+    label: 'Лидер'
+    span: auto
+    type: switch
+    tab: 'Profile'
