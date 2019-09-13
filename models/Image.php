@@ -35,7 +35,7 @@ class Image extends Model
 
     public $morphMany = [
         'comments' => [ \Shohabbos\Comments\Models\Comment::class, 'name' => 'attachment'],
-        'likes' => [\Shohabbos\Like\Models\Like::class, 'name' => 'attachment']
+        'likes'    => [ \Shohabbos\Like\Models\Like::class,        'name' => 'attachment']
     ];
     
     protected $guarded = ['id'];
