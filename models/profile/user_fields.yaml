@@ -13,7 +13,7 @@ profile[phone]:
     span: auto
     type: text
     tab: 'Profile'
-key:
+username:
     label: 'Секретный ключ'
     span: auto
     type: text

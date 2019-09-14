@@ -13,7 +13,7 @@ class Plugin extends PluginBase
 	public function boot()
     {
         UserModel::extend(function ($model) {
-            $model->addFillable(['profile', 'key', 'leader']);
+            $model->addFillable(['profile', 'leader']);
             
             $model->hasOne['profile'] = Profile::class;
             $model->hasMany['images'] = Image::class;
@@ -25,12 +25,6 @@ class Plugin extends PluginBase
             });
         });
 
-        Event::listen('rainlab.user.register', function ($user, $data) {
-            $key = md5($data['email'] . $data['password']);
-            dump($data, $key);
-            $user->key = $key;
-            $user->save();
-        });
         
         // extend form
         UsersController::extendFormFields(function($form, $model, $context) {
