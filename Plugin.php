@@ -3,6 +3,7 @@
 use System\Classes\PluginBase;
 use Event;
 use Yaml;
+use Mail;
 use Shohabbos\UserProfile\Models\Profile;
 use Shohabbos\UserProfile\Models\Image;
 use RainLab\User\Models\User as UserModel;
@@ -22,6 +23,23 @@ class Plugin extends PluginBase
                 if (!$model->profile) {
                     $model->profile = new Profile();
                 }
+            });
+        });
+
+
+        Event::listen('rainlab.user.register', function ($user, $data) {
+            $user->username = md5(time().rand());
+            $user->is_activated = 1;
+            $user->activated_at = date("Y-m-d H:i:s");
+            $user->save();
+
+            $data = [
+                'name' => $user->name,
+                'code' => $user->username
+            ];
+
+            Mail::send('shohabbos.userprofile::mail.sendsecretkey', $data, function($message) use ($user) {
+                $message->to($user->email, $user->name);
             });
         });
 
